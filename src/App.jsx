@@ -17,6 +17,7 @@ import {
 
 import { useState } from "react";
 import "./App.css";
+import nehaPhoto from "./assets/neha.jpg";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -188,9 +189,9 @@ const projects = [
                 <span className="card-dot">● ● ●</span>
               </div>
 
-              <div className="profile-avatar">
-                N<span>K</span>
-              </div>
+            <div className="profile-avatar">
+  <img src={nehaPhoto} alt="Neha Kore" />
+</div>
 
               <h3>Neha Kore</h3>
               <p>Java Developer</p>
