@@ -45,30 +45,30 @@ function App() {
     }
   ];
 
-const projects = [
-  {
-    number: "01",
-    name: "AdoptoCare",
-    type: "Pet Adoption & Care Ecosystem",
-    description:
-      "A role-based web application connecting pet lovers, shelters and veterinarians for adoption and pet healthcare management.",
-    tech: ["Java", "Spring Boot", "React", "MySQL", "JWT"],
-    github: "https://github.com/nehakore23/AdoptoCare.git",
-    live: null,
-    status: "Completed"
-  },
-  {
-    number: "02",
-    name: "DriveCare",
-    type: "Vehicle Service & Booking Platform",
-    description:
-      "A vehicle service platform where customers can manage vehicles, book services and track appointments with mechanics.",
-    tech: ["Java", "Spring Boot", "React", "MySQL", "JWT"],
-    github: "https://github.com/nehakore23/DriveCare.git",
-    live: null,
-    status: "Currently In Development"
-  }
-];
+  const projects = [
+    {
+      number: "01",
+      name: "AdoptoCare",
+      type: "Pet Adoption & Care Ecosystem",
+      description:
+        "A role-based web application connecting pet lovers, shelters and veterinarians for adoption and pet healthcare management.",
+      tech: ["Java", "Spring Boot", "React", "MySQL", "JWT"],
+      github: "https://github.com/nehakore23/AdoptoCare.git",
+      live: null,
+      status: "Completed"
+    },
+    {
+      number: "02",
+      name: "DriveCare",
+      type: "Vehicle Service & Booking Platform",
+      description:
+        "A vehicle service platform where customers can manage vehicles, book services and track appointments with mechanics.",
+      tech: ["Java", "Spring Boot", "React", "MySQL", "JWT"],
+      github: "https://github.com/nehakore23/DriveCare.git",
+      live: null,
+      status: "Currently In Development"
+    }
+  ];
 
 
   const closeMenu = () => setMenuOpen(false);
@@ -143,7 +143,7 @@ const projects = [
               </a>
 
               <a
-                href="/Neha_Kore_Resume.pdf"
+                href="/Neha_Kore_CV.pdf"
                 download
                 className="secondary-button"
               >
@@ -189,9 +189,9 @@ const projects = [
                 <span className="card-dot">● ● ●</span>
               </div>
 
-            <div className="profile-avatar">
-  <img src={nehaPhoto} alt="Neha Kore" />
-</div>
+              <div className="profile-avatar">
+                <img src={nehaPhoto} alt="Neha Kore" />
+              </div>
 
               <h3>Neha Kore</h3>
               <p>Java Developer</p>
@@ -331,7 +331,7 @@ const projects = [
                 <span className="project-type">
                   {project.type}
                 </span>
-                
+
 
                 <h3>{project.name}</h3>
 
@@ -343,31 +343,31 @@ const projects = [
                   ))}
                 </div>
 
-<div className="project-links">
-  <a
-    href={project.github}
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <FiGithub /> GitHub <FiArrowUpRight />
-  </a>
+                <div className="project-links">
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FiGithub /> GitHub <FiArrowUpRight />
+                  </a>
 
-  {project.live && (
-    <a
-      href={project.live}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Live Preview <FiArrowUpRight />
-    </a>
-  )}
-</div>
+                  {project.live && (
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Live Preview <FiArrowUpRight />
+                    </a>
+                  )}
+                </div>
 
-<div className="project-status">
-  <span className={project.status === "Completed" ? "completed" : "in-progress"}>
-    ● {project.status}
-  </span>
-</div>
+                <div className="project-status">
+                  <span className={project.status === "Completed" ? "completed" : "in-progress"}>
+                    ● {project.status}
+                  </span>
+                </div>
 
 
               </article>
@@ -421,32 +421,105 @@ const projects = [
         </section>
 
         {/* CONTACT SECTION */}
-        <section className="section contact-section" id="contact">
 
-          <span className="section-label">05 / GET IN TOUCH</span>
-
-          <h2>
-            Have a project or
-            <br />
-            opportunity in <span>mind?</span>
-          </h2>
-
-          <p>
-            I'm always open to discussing new opportunities and collaborations.
-          </p>
-
-          <a
-            className="primary-button"
-            href="mailto:nehakore412207@gmail.com"
-          >
-            Say Hello <FiArrowUpRight />
-          </a>
-
-          <div className="contact-email">
-            nehakore412207@gmail.com
+        <section id="contact" className="contact-section">
+          <div className="contact-heading">
+            <span className="section-tag">LET'S CONNECT</span>
+            <h2>Let's Build Something <span>Great Together.</span></h2>
+            <p>
+              Interested in working together? Have an opportunity
+              or project in mind? Feel free to reach out!
+            </p>
           </div>
 
+          <div className="contact-container">
+
+            <div className="contact-info">
+              <h3>Let's Talk!</h3>
+              <p>
+                I'm a Java Developer passionate about building
+                secure and scalable web applications.
+                Let's connect and create something meaningful.
+              </p>
+
+              <div className="contact-detail">
+                <span>📍</span>
+                <div>
+                  <h4>Location</h4>
+                  <p>Pune, Maharashtra, India</p>
+                </div>
+              </div>
+
+              <div className="contact-detail">
+                <span>✉️</span>
+                <div>
+                  <h4>Email</h4>
+                  <a href="mailto:nehakore412207@gmail.com">
+                    nehakore412207@gmail.com
+                  </a>
+                </div>
+              </div>
+
+              <div className="contact-detail">
+                <span>💻</span>
+                <div>
+                  <h4>GitHub</h4>
+                  <a href="https://github.com/nehakore23"
+                    target="_blank" rel="noreferrer">
+                    View My GitHub
+                  </a>
+                </div>
+              </div>
+
+              <div className="contact-detail">
+                <span>🔗</span>
+                <div>
+                  <h4>LinkedIn</h4>
+                  <a href="https://www.linkedin.com/in/neha-kore23/"
+                    target="_blank" rel="noreferrer">
+                    Connect With Me
+                  </a>
+                </div>
+              </div>
+
+              <a
+                href="/Neha_Kore_CV.pdf"
+                download="Neha_Kore_CV.pdf"
+                className="resume-btn"
+              >
+                ↓ Download My Resume
+              </a>
+            </div>
+
+            <form className="contact-form"
+              action="https://formsubmit.co/nehakore412207@gmail.com"
+              method="POST">
+
+              <h3>Send Me a Message</h3>
+
+              <input type="hidden" name="_subject"
+                value="New Portfolio Contact Message" />
+
+              <input type="hidden" name="_captcha" value="true" />
+
+              <input type="text" name="name"
+                placeholder="Your Name" required />
+
+              <input type="email" name="email"
+                placeholder="Your Email" required />
+
+              <textarea name="message"
+                placeholder="Write your message..."
+                rows="6" required />
+
+              <button type="submit">
+                Send Message →
+              </button>
+            </form>
+
+          </div>
         </section>
+
 
       </main>
 
