@@ -12,15 +12,46 @@ import {
   FiBookOpen,
   FiMenu,
   FiX,
-  FiStar
+  FiStar,
+  FiSun,
+  FiMoon
 } from "react-icons/fi";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import nehaPhoto from "./assets/neha.jpg";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const [darkMode, setDarkMode] = useState(() => {
+    const savedTheme = localStorage.getItem("theme");
+
+    if (savedTheme) {
+      return savedTheme === "dark";
+    }
+
+    return true;
+  });
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    document.body.className = darkMode ? "dark-theme" : "light-theme";
+
+    localStorage.setItem(
+      "theme",
+      darkMode ? "dark" : "light"
+    );
+  }, [darkMode]);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 900);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const skills = [
     {
